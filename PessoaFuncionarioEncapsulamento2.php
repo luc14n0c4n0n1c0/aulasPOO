@@ -120,6 +120,25 @@ class Pessoa {
         $impostos = $this->salario * 0.2; // calcula 20% do salário como impostos
         return $impostos;
     }
+
+    public function mediaSalarial($listaFuncionarios) {
+        $totalSalarios = 0;
+        $numFuncionarios = 0;
+    
+        foreach ($listaFuncionarios as $funcionario) {
+            if ($funcionario instanceof Funcionario) {
+                $totalSalarios += $funcionario->getSalario();
+                $numFuncionarios++;
+            }
+        }
+    
+        if ($numFuncionarios > 0) {
+            return round($totalSalarios / $numFuncionarios, 2);
+        } else {
+            return 0;
+        }
+    }
+    
   }
   
     // Instâncias da classe Pessoa
@@ -196,6 +215,19 @@ class Pessoa {
     // Calculando impostos do funcionário 3
     $impostos_funcionario3 = $funcionario3->calcularImpostos();
     echo "Impostos do funcionário 3: R$ " . $impostos_funcionario3 . "<br>";
+
+    // criando uma lista de funcionários
+    $listaFuncionarios = [
+        $funcionario1,
+        $funcionario2,
+        $funcionario3
+    ];
+
+    // chamando o método calcularMediaSalarial
+    $mediaSalarial = $funcionario1->mediaSalarial($listaFuncionarios); //aqui poderia ser melhor vamos ver isso mais adiante com métodos static
+
+    // exibindo a média salarial
+    echo "Média salarial: R$ " . $mediaSalarial . "<br>";
 
 ?>
   
