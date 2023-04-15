@@ -1,0 +1,22 @@
++-------------------+
+|   TelefoneCelular |
++-------------------+
+| - marca           |
+| - modelo          |
+| - cor             |
+| - tamanhoTela     |
+| - capacidadeBateria|
+| - porcentagemBateria|
+| - carregadorConectado|
+| - nivelVolume     |
++-------------------+
+| + ligar()         |
+| + desligar()      |
+| + enviarMensagem(texto: string, numero: string) |
+| + fazerLigacao(numero: string) |
+| + conectarCarregador() |
+| + desconectarCarregador() |
+| + aumentarVolume() |
+| + diminuirVolume() |
+| + verificarBateria() : string |
++-------------------+

@@ -1,0 +1,22 @@
+<?php
+// Declaração das variáveis
+$olhos = "azul";
+$cabelo = "castanho";
+$usa_oculos = true;
+$vestimenta = "calça jeans e blazer";
+$segura_lampada = true;
+
+// Impressão das informações
+echo "Essa pessoa possui olhos " . $olhos . ", cabelo " . $cabelo . " e ";
+if ($usa_oculos) {
+  echo "usa óculos. <br>";
+} else {
+  echo "não usa óculos. <br>";
+}
+echo "Está usando " . $vestimenta . " e ";
+if ($segura_lampada) {
+  echo "está segurando uma lâmpada. <br>";
+} else {
+  echo "não está segurando nada. <br>";
+}
+?>
